@@ -12,36 +12,47 @@ let complete = 0;
 submit.onclick = function() {
     no += 1;
     let text = textBox.value;
-    const list = document.createElement("li"); // Create list element
-    const newList = document.createElement("div"); // Create div element
-    const textSpan = document.createElement("span");
-    textSpan.innerHTML = text; // Change its text to the value of what you typed
-    newList.appendChild(textSpan);
-    list.appendChild(newList);
-    div.appendChild(list);
-    i++;
-    list.setAttribute("id", i);
-    textBox.value = "";
+    if (text != "") {
+        const list = document.createElement("li"); // Create list element
+        const newList = document.createElement("div"); // Create div element
+        const textSpan = document.createElement("span");
+        let complete2 = false
 
-    let button = document.createElement("button");
-    button.innerHTML = "X";
-    newList.appendChild(button);
-    button.onclick = function() {
-        list.remove()
-    }
+        textSpan.innerHTML = text; // Change its text to the value of what you typed
+        newList.appendChild(textSpan);
+        list.appendChild(newList);
+        div.appendChild(list);
+        i++;
+        list.setAttribute("id", i);
+        textBox.value = "";
 
-    let button1 = document.createElement("button");
-    button1.id = "button1";
-    button1.innerHTML = "✔";
-    newList.appendChild(button1);
+        let button = document.createElement("button");
+        button.innerHTML = "X";
+        newList.appendChild(button);
+        button.onclick = function() {
+            no -= 1;
+            if (complete2 === true) {
+                complete -= 1;
+            }
+            counter.innerHTML = complete + "/" + no;
+            list.remove()
+        }
 
-    button1.onclick = function() {
-        textSpan.style.textDecoration = "line-through";
-        textSpan.style.textDecorationThickness = "3px";
-        textSpan.style.textDecorationColor = "black";
-        button1.remove(); // Delete ✔ button after clicking
-        complete += 1;
+        let button1 = document.createElement("button");
+        button1.id = "button1";
+        button1.innerHTML = "✔";
+        newList.appendChild(button1);
+
+        button1.onclick = function() {
+            textSpan.style.textDecoration = "line-through";
+            textSpan.style.textDecorationThickness = "2.5px";
+            textSpan.style.textDecorationColor = "black";
+            button1.remove(); // Delete ✔ button after clicking
+            complete += 1;
+            counter.innerHTML = complete + "/" + no;
+            complete2 = true
+        };
+
         counter.innerHTML = complete + "/" + no;
-    };
-    counter.innerHTML = complete + "/" + no;
+    }
 }
