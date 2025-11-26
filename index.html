@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1> BLT chatroom</h1>
     <br> <br>
-</header>
-<div> </div> 
-<br> <br>
-<input type="text" placeholder="Enter message here:" id="message">
-<button type="submit">
-        <img src="https://cdn.iconscout.com/icon/free/png-512/free-right-arrow-icon-svg-download-png-1218375.png?f=webp&w=256" width="20" height="20"/>
-      </button>
+<section id="section">
+    <br> <br> 
+    <h1>To-do list</h1>
+    <br> 
+    <h3 id="counter">0/0</h3>
+    <input type="text" id="text" placeholder="Add your list here: ">
+    <button id="submit"> Submit</button>
+    <ul id="to-do"></ul>
+    <script src="index.js"></script>
+</section>
 </body>
 </html>

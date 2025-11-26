@@ -1,0 +1,62 @@
+section {
+    margin: auto;
+    text-align: center;
+    width: 1000px;
+    height: 750px;
+    background-color: #FCAF58;
+    border-radius: 20px;
+}
+
+body {
+    background-color: #FF8C42;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#text {
+    width: 400px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#submit {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 75px;
+}
+
+ul li {
+    background-color: white;
+    width: 500px;
+    height: 30px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+#to-do > li > div > button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    margin-right: 15px;
+    margin-top: 6.5px;
+    margin-bottom: 5px;
+}
+
+#to-do > li > div > #button1 {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    margin-right: 15px;
+    margin-top: 6.5px;
+    margin-bottom: 5px;
+}
